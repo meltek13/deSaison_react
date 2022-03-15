@@ -102,7 +102,7 @@ justify-content: space-between;
 }
 @media screen and (min-width: 0px){
   .box-infos{
-  font-size: 8px;
+  font-size: 10px;
   }
 }
 
