@@ -127,3 +127,12 @@ justify-content: space-between;
 .underline{
   text-decoration: none;
 }
+
+.scroll_to_top {
+  font-size: 35px;
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  bottom: 50px;
+  right: 30px;
+}
