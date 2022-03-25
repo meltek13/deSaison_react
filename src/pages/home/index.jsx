@@ -7,7 +7,7 @@ const Home = () => {
     const [searchWines, setSearchWines] = useState([]);
 
     useEffect(() => {
-        fetch(`https://desaison.herokuapp.com/wines`)
+        fetch(`http://localhost:3000/wines`)
           .then((response) => response.json())
           .then((response) => {
             setWines(response);
@@ -30,7 +30,7 @@ const Home = () => {
            
         });
     } else {
-        fetch(`https://desaison.herokuapp.com/wines`)
+        fetch(`http://localhost:3000/wines`)
         .then((response) => response.json())
         .then((response) => {
           setWines(response);
@@ -44,7 +44,7 @@ const Home = () => {
   <div>
     <div>
       <h1 className="display-4 font-abril "><strong>DE SAISON</strong></h1>
-      <p className="lead "><strong>carte des vins</strong></p>
+      <p className="lead ">carte des vins</p>
     </div>
 
    <div>
@@ -62,15 +62,15 @@ const Home = () => {
           wines.map((wine) => (
             <div key={wine.id}>
               <div className="container">
+              <Link to={`/description/${wine.id}`} className="underline">
                 <div className="box-infos">
-             
-                      <h3 className="wine-info font-abril">{wine.area} / {wine.domain} / <span className="blue-color">{wine.name}</span> / {wine.year}  </h3>
-               
+                  <h3 className="wine-info font-abril">{wine.area} / {wine.domain} / <span className="blue-color">{wine.name}</span> / {wine.year}  </h3>
                   <h3 className=" wine-info font-abril blue-color margin-top">{wine.price} €</h3>
                   <p className="wine-info margin-top">{wine.grappe} / {wine.winemaker} / {wine.color}</p>
                   <p className="wine-info margin-top"></p>
                   <p className="wine-info font-style-italic">"{wine.description}"</p>
                 </div>
+                </Link>
               </div>
             </div>
           ))
