@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { ArrowUpOutlined } from "@ant-design/icons";
 import './home.css';
 
 const Home = () => {  
@@ -78,7 +79,11 @@ const Home = () => {
 
       </div>
       </div>
-
+   
+      <div className="scroll_to_top">
+        <a href="#top" className="blue-color"><ArrowUpOutlined /></a>
+      </div>
+      
   </div>
   )
   
