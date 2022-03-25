@@ -7,7 +7,7 @@ const Home = () => {
     const [searchWines, setSearchWines] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/wines`)
+        fetch(`http://desaison.herokuapp.com/wines`)
           .then((response) => response.json())
           .then((response) => {
             setWines(response);
@@ -30,7 +30,7 @@ const Home = () => {
            
         });
     } else {
-        fetch(`http://localhost:3000/wines`)
+        fetch(`http://desaison.herokuapp.com/wines`)
         .then((response) => response.json())
         .then((response) => {
           setWines(response);
